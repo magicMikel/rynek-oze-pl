@@ -1,0 +1,26 @@
+baseURL = "https://rynek-oze.pl/"
+languageCode = "pl-PL"
+title = "Rynek OZE"
+defaultContentLanguage = "pl"
+enableRobotsTXT = true
+summaryLength = 160
+[pagination]
+  pagerSize = 12
+copyright = "© 2026 rynek-oze.pl"
+[params]
+  siteName = "Rynek OZE"
+  siteDescription = "Aktualności i analizy polskiego rynku energii odnawialnej"
+  siteKeywords = "rynek energii, ceny prądu, transformacja energetyczna, aukcje OZE"
+  author = "Redakcja Rynek OZE"
+  dateFormat = "2 January 2006"
+[taxonomies]
+  category = "kategorie"
+  tag = "tagi"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+[sitemap]
+  changefreq = "daily"
+  priority = 0.5
+  filename = "sitemap.xml"
