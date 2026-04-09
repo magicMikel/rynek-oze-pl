@@ -1,26 +1,99 @@
 baseURL = "https://rynek-oze.pl/"
 languageCode = "pl-PL"
-title = "Rynek OZE"
+title = "Rynek OZE – Aktualności i Analizy Rynku Energii"
 defaultContentLanguage = "pl"
 enableRobotsTXT = true
+enableGitInfo = false
 summaryLength = 160
 [pagination]
   pagerSize = 12
+  path = "strona"
 copyright = "© 2026 rynek-oze.pl"
+
 [params]
-  siteName = "Rynek OZE"
-  siteDescription = "Aktualności i analizy polskiego rynku energii odnawialnej"
-  siteKeywords = "rynek energii, ceny prądu, transformacja energetyczna, aukcje OZE"
-  author = "Redakcja Rynek OZE"
+  siteName = "RynekOZE.pl"
+  siteDescription = "Serwis newsowo-analityczny dla profesjonalistów branży energetycznej. Ceny energii TGE, aukcje OZE, transformacja energetyczna."
+  siteKeywords = "rynek OZE, ceny energii, aukcje OZE, transformacja energetyczna, TGE, moce zainstalowane"
+  siteImage = "/img/og-default.jpg"
+  author = "Redakcja RynekOZE.pl"
+  email = "redakcja@rynek-oze.pl"
+  googleAnalytics = ""
+  adsenseClient = "ca-pub-XXXXXXXXXX"
+  adsenseSlotArticle = "1234567890"
+  adsenseSlotSidebar = "0987654321"
+  twitterHandle = "@rynekoze"
+  locale = "pl_PL"
   dateFormat = "2 January 2006"
+  dateFormatShort = "02.01.2006"
+
 [taxonomies]
   category = "kategorie"
   tag = "tagi"
+  author = "autorzy"
+
+[menu]
+  [[menu.main]]
+    name = "Aktualności"
+    url = "/aktualnosci/"
+    weight = 1
+  [[menu.main]]
+    name = "Dotacje"
+    url = "/dotacje/"
+    weight = 2
+  [[menu.main]]
+    name = "Poradniki"
+    url = "/poradniki/"
+    weight = 3
+  [[menu.main]]
+    name = "Artykuły"
+    url = "/posts/"
+    weight = 4
+  [[menu.footer]]
+    name = "O portalu"
+    url = "/o-portalu/"
+    weight = 1
+  [[menu.footer]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 2
+  [[menu.footer]]
+    name = "Polityka prywatności"
+    url = "/polityka-prywatnosci/"
+    weight = 3
+
+[outputFormats]
+  [outputFormats.NewsSitemap]
+    mediaType = "application/xml"
+    baseName = "news-sitemap"
+    isPlainText = false
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "NewsSitemap"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    style = "monokai"
+
 [sitemap]
   changefreq = "daily"
   priority = 0.5
   filename = "sitemap.xml"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
